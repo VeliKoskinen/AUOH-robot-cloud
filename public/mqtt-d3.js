@@ -54,7 +54,7 @@ let j2 = d3.line()
     .attr("class", "j2") 
     .attr("d", j2) 
     .style('fill', 'none') 
-    .style('stroke', '#7d7d00'); 
+    .style('stroke', '#7d7d7d');
 
 let j3 = d3.line() 
     .x((d) => { 
