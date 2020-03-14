@@ -6,7 +6,7 @@ let scene = new THREE.Scene();
 let width = window.innerWidth;
 let height = window.innerHeight;
 let view_angle = 45;
-let near = 0.1; //yksikkö metriä
+let near = 0.1;
 let far = 1000;
 
 //Camera setup
@@ -32,9 +32,9 @@ three_view.appendChild(renderer.domElement);
     scene.add(mesh);
 }
 
-//Test cube
+// TEST CUBE
 {
-    let geometry = new THREE.BoxGeometry(1,1,1);
+    let geometry = new THREE.BoxGeometry(1, 1, 1);
     let material = new THREE.MeshLambertMaterial({
         color: 0xff0000
     });
@@ -56,7 +56,7 @@ scene.fog = new THREE.Fog(0xFFFFFF, 3, 30);
 
 const stl_loader = new THREE.STLLoader();
 const load_stl = (url) => {
-    return new Promise((resolve)=>{
+    return new Promise((resolve) => {
         stl_loader.load(url, resolve);
     });
 };
@@ -64,6 +64,7 @@ const load_stl = (url) => {
 let dark = new THREE.MeshLambertMaterial({
     color: 0x111111
 });
+
 let yellow = new THREE.MeshLambertMaterial({
     color: 0xFFFF00
 });
@@ -103,8 +104,11 @@ const load_geometries = async () => {
         joints[5].geometry.scale(0.001, 0.001, 0.001);
         scene.add(joints[5]);
     }
+
 };
+
 load_geometries();
+
 
 const orbit_controls = new THREE.OrbitControls(camera, renderer.domElement);
 orbit_controls.target = new THREE.Vector3(0, 0, 0);
