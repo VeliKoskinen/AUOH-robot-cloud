@@ -39,9 +39,9 @@ three_view.appendChild(renderer.domElement);
         color: 0xff0000
     });
     let mesh = new THREE.Mesh(geometry, material);
-    //scene.add(mesh);
+    //scene.add(mesh); <- tämä koodi lisää materiaalin näkyviin
 }
-
+// valon asetukset
 let light = new THREE.DirectionalLight(0xAAAAAA, 1.5);
 light.position.x = 10;
 light.position.y = 10;
@@ -61,6 +61,7 @@ const load_stl = (url) => {
     });
 };
 
+//materiaalien värit
 let dark = new THREE.MeshLambertMaterial({
     color: 0x111111
 });
@@ -68,6 +69,7 @@ let yellow = new THREE.MeshLambertMaterial({
     color: 0xFFFF00
 });
 
+//materiaalien lisäys
 let joints = [];
 const load_geometries = async () => {
     {
@@ -115,7 +117,7 @@ const animate = () => {
     renderer.render(scene, camera);
 };
 animate();
-
+//aktiivinen koon päivitys
 const resize = () => {
     width = window.innerWidth;
     height = window.innerHeight;
