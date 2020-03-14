@@ -54,7 +54,7 @@ let j2 = d3.line()
     .attr("class", "j2") 
     .attr("d", j2) 
     .style('fill', 'none') 
-    .style('stroke', '#0FF'); 
+    .style('stroke', '#7d7d00'); 
 
 let j3 = d3.line() 
     .x((d) => { 
@@ -118,7 +118,7 @@ let j6 = d3.line()
     .attr("class", "j6") 
     .attr("d", j6) 
     .style('fill', 'none') 
-    .style('stroke', '#FFF');
+    .style('stroke', '#ff7d00');
 
 const resize = () => { 
     width = window.innerWidth - margin.left - margin.right 
