@@ -146,15 +146,15 @@ const update_chart = () => {
     svg.select(".j1") // change the line 
     .attr("d", j1(joint_datas)); 
     svg.select(".j2") // change the line 
-    .attr("d", j1(joint_datas)); 
+    .attr("d", j2(joint_datas)); 
     svg.select(".j3") // change the line 
-    .attr("d", j1(joint_datas)); 
+    .attr("d", j3(joint_datas)); 
     svg.select(".j4") // change the line 
-    .attr("d", j1(joint_datas)); 
+    .attr("d", j4(joint_datas)); 
     svg.select(".j5") // change the line 
-    .attr("d", j1(joint_datas)); 
+    .attr("d", j5(joint_datas)); 
     svg.select(".j6") // change the line 
-    .attr("d", j1(joint_datas)); 
+    .attr("d", j6(joint_datas)); 
  };  
     
 const mqtt_client = mqtt.connect('wss://auoh.herokuapp.com'); 
