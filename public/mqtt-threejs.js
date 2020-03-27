@@ -123,11 +123,12 @@ load_geometries().then(() => {
     joints[2].geometry.translate(-0.312, -0.670, 0.117);
     joints[3].geometry.translate(-0.26869, -1.74413, 0.19685);
     joints[4].geometry.translate(-1.31519, -1.696913, -0.0015);
-    //joints[].geometry.translate(-1.54869, -1.696913, -0.8715);
-    //joints[].geometry.translate(-1.76369, -1.696913, -0.2047);
+    joints[5].geometry.translate(-1.54869, -1.696913, -0.8715);
+    //joints[6].geometry.translate(-1.76369, -1.696913, -0.2047);
 
     scene.add(joints[0]);
     joints[0].rotation.set(THREE.Math.degToRad(90), 0, 0);
+    joints[3].rotation.set(THREE.Math.degToRad(180), 0, 0);
 
     offsets.push(new THREE.Group());
     offsets[0].position.set(0, 0.282, 0);
@@ -140,26 +141,25 @@ load_geometries().then(() => {
     offsets[1].add(joints[2]);
 
     offsets.push(new THREE.Group());
-    offsets[2].position.set(0.04331, 1.074413, -0.07985);
+    offsets[2].position.set(-0.04331, 1.07413, -0.07985);
     joints[2].add(offsets[2]);
     offsets[2].add(joints[3]);
     
-    /*offsets.push(new THREE.Group());
-    offsets[3].position.set(0.04331, 1.07413, -0.19685);
+    offsets.push(new THREE.Group());
+    offsets[3].position.set(1.0465, -0.04775, 0.199);
     joints[3].add(offsets[3]);
     offsets[3].add(joints[4]);
 
-    offsets.push(new THREE.Group());
-    offsets[4].position.set(0.04331, 1.07413, -0.19685);
+    /*offsets.push(new THREE.Group());
+    offsets[4].position.set(0.2335, 0, 0.087);
     joints[4].add(offsets[4]);
-    offsets[4].add(joints[5]);
+    offsets[4].add(joints[5]);*/
 
-    offsets.push(new THREE.Group());
-    offsets[5].position.set(0.04331, 1.07413, -0.19685);
-    joints[5].add(offsets[5]);
-    offsets[5].add(joints[6]);*/
+    /*offsets.push(new THREE.Group());
+    offsets[5].position.set(0.215, 0, -0.06668);
+    joints[5].add(offsets[5]);*/
 
-    // joints[2].rotation.set(0, 0, THREE.Math.DegToRad(45));
+    //joints[2].rotation.set(0, 0, THREE.Math.DegToRad(45));
 });
 
 const orbit_controls = new THREE.OrbitControls(camera, renderer.domElement);
