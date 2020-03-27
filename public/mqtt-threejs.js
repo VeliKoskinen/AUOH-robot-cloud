@@ -122,13 +122,13 @@ load_geometries().then(() => {
     joints[1].geometry.translate(0, -0.282, 0);
     joints[2].geometry.translate(-0.312, -0.670, 0.117);
     joints[3].geometry.translate(-0.26869, -1.74413, 0.19685);
-    joints[4].geometry.translate(-1.31519, -1.696913, -0.0015);
-    joints[5].geometry.translate(-1.54869, -1.696913, -0.8715);
-    //joints[6].geometry.translate(-1.76369, -1.696913, -0.2047);
+    joints[4].geometry.translate(-1.31519, -1.96913, -0.0015);
+    joints[5].geometry.translate(-1.54869, -1.96913, -0.08715);
+    //joints[5].geometry.translate(-1.76369, -1.96913, -0.02047);
 
     scene.add(joints[0]);
     joints[0].rotation.set(THREE.Math.degToRad(90), 0, 0);
-    joints[3].rotation.set(THREE.Math.degToRad(180), 0, 0);
+    // joints[3].rotation.set(THREE.Math.degToRad(180), 0, 0);
 
     offsets.push(new THREE.Group());
     offsets[0].position.set(0, 0.282, 0);
@@ -146,14 +146,14 @@ load_geometries().then(() => {
     offsets[2].add(joints[3]);
     
     offsets.push(new THREE.Group());
-    offsets[3].position.set(1.0465, -0.04775, 0.199);
+    offsets[3].position.set(1.0465, 0.225, 0.197);
     joints[3].add(offsets[3]);
     offsets[3].add(joints[4]);
 
-    /*offsets.push(new THREE.Group());
+    offsets.push(new THREE.Group());
     offsets[4].position.set(0.2335, 0, 0.087);
     joints[4].add(offsets[4]);
-    offsets[4].add(joints[5]);*/
+    offsets[4].add(joints[5]);
 
     /*offsets.push(new THREE.Group());
     offsets[5].position.set(0.215, 0, -0.06668);
